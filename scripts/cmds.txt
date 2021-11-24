@@ -1,0 +1,28 @@
+cd source 
+
+dotnet new webapi --language C# --name simplewebapi 
+
+rg=iomegaresourcegroup
+location=eastus
+acrName=iomegacrv2
+
+az group create --name $rg --location $location
+
+az acr create --name $acrName --resource-group $rg --location $location --sku Basic --admin-enabled true
+
+az acr login -n $acrName
+
+./scripts/build.sh $acrName
+
+./scripts/push.sh $acrName
+
+acrPassword=$(az acr credential show --name $acrName --query "passwords[0].value" -o tsv)
+
+az deployment group create --name container-app --resource-group $rg --template-file ./deployments/main.bicep  -p containerImage=$acrName.azurecr.io/simplewebapi:0.0.1 containerPort=5000 registry=$acrName.azurecr.io registryUsername=$acrName
+
+fqdn=$(az deployment group show --resource-group $rg --query properties.outputs.fqdn.value -n container-app -o tsv)
+
+echo $fqdn
+
+curl --silent -X GET https://$fqdn/weatherforecast | jq
+

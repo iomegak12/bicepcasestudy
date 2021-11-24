@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "FMISfQWw31j7tyB9PGgCu5NeZwrw+AxUoaQCNWtPd1UZU6CHvH/vgkng1O1m/ySyaFz4FJHXw9SY20r+aUaG2A==",
+  "success": true,
+  "projectFilePath": "C:\\0 - Microsoft Webinars\\References\\Bicep\\practice-2\\source\\simplewebapi\\simplewebapi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\iomeg\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\iomeg\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\iomeg\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\iomeg\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\iomeg\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\iomeg\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
